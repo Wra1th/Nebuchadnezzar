@@ -15,8 +15,6 @@ class TextColor:
 #print(TextColor.RED + "This text is red." + TextColor.RESET)
 #print(TextColor.GREEN + "This text is green." + TextColor.RESET)
 
-
-
 # Define the Gematria Primus Alphabet
 alphabet = ["F", "U", "TH", "O", "R", "C", "G", "W", "H", "N", "I", "J", "EO", "P", "X", "S", "T", "B", "E", "M", "L",
             "ING", "OE", "D", "A", "AE", "Y", "IO", "EA"]
@@ -59,32 +57,36 @@ def rolling_key_decryption():
     key_text = input("Enter the key text: ").replace(',', '').replace(' ', '').upper()
     encrypted_text = input("Enter the encrypted text: ").replace(',', '').replace(' ', '').upper()
 
+    key_text = key_text.replace('V', 'U')  # Replace 'V' with 'U' in the key text
     key_length = len(key_text)
     encrypted_length = len(encrypted_text)
 
     decrypted_text_all = ""
 
-    for i in range(encrypted_length):
-        decrypted_text = ''
+    # Limit the number of iterations to the length of the encrypted message
+    iterations = min(key_length, encrypted_length)
 
-        for j in range(key_length):
+    for i in range(iterations):
+        decrypted_text = []
+
+        for j in range(encrypted_length):
             key_char = key_text[(j + i) % key_length]
-            encrypted_char = encrypted_text[i]
+            encrypted_char = encrypted_text[j]
 
             if encrypted_char not in alphabet_list:
-                decrypted_text += encrypted_char
+                decrypted_text.append(encrypted_char)
             else:
                 encrypted_index = index_dict[encrypted_char]
                 key_index = index_dict[key_char]
                 decrypted_index = (encrypted_index + key_index) % len(alphabet_list)
                 decrypted_char = alphabet_list[decrypted_index - 1]
-                decrypted_text += decrypted_char
+                decrypted_text.append(decrypted_char)
 
-        if decrypted_text.startswith("A") or decrypted_text.startswith("I"):
-            iteration_num = str(i + 1).zfill(2)
-            print("Iteration", iteration_num, ":", decrypted_text)
+        iteration_num = str(i + 1).zfill(4)  # Ensure 4-digit iteration number
+        result = ', '.join(decrypted_text)
+        print(f"Iteration {iteration_num} : {result}")
 
-            decrypted_text_all += decrypted_text + "\n"
+        decrypted_text_all += result + "\n"
 
     export_option = input("Do you want to export all iterations to a file? (y/n) ")
     if export_option.lower() == "y":
@@ -97,9 +99,6 @@ def rolling_key_decryption():
             print("Error exporting iterations to a file.")
 
     print("Decryption complete.")
-
-
-
 
 # Function to print the alphabet row with index numbers
 def print_alphabet_row():
@@ -181,8 +180,6 @@ while True:
 
         print("Sum of pre-shifted primes:", pre_sum)
         print("Sum of post-shifted primes:", post_sum)
-
-
 
     elif option == "3":
         chars = input("Enter one or more characters to check (separated by commas): ").split(",")
