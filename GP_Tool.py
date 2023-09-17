@@ -155,8 +155,6 @@ while True:
 
         print(f"results: {', '.join([index_to_char(int(r) - 0) for r in results])}")
 
-    # ...
-
     elif option == "2":
         chars = input("Enter one or more characters to check (separated by commas): ").split(",")
         chars = [char.strip() for char in chars]
