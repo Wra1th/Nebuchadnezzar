@@ -6,6 +6,7 @@
 
 > [!NOTE]
 > Important!
+<br>
 
 This program does **NOT** work with runes. Only letters and numbers.<br>
 All string inputs are CSV format.
@@ -32,6 +33,8 @@ First accepts a user input for a character string to be shifted. **MUST BE LETTE
 
 > [!Note]
 > Length of string and shift sequence **MUST** be the same length.
+
+<br>
 
 example:<br>
 ```
