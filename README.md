@@ -9,9 +9,9 @@
 
 example:
 ```
-(2, 3, 5, 7, 11...)
-(2,3,5,7,11...)
-(A, B, C, D, E...)
+(2, 3, 5, 7, 11, ...)
+(2,3,5,7,11,...)
+(A, B, C, D, E, ...)
 (A,B,C,D,E,...)
 ```
 ## Tutorial
@@ -24,7 +24,7 @@ Main Menu
 6. Quit
 
 ### 1. Key Shift
-First accepts a user input for a character string to be shifted. **MUST BE LETTERS** Then asks for user for shift sequence. **CAN BE LETTERS OR NUMBERS**. 
++ First accepts a user input for a character string to be shifted. **MUST BE LETTERS** Then asks for user for shift sequence. **CAN BE LETTERS OR NUMBERS**. 
 
 > [!Note]
 > Length of string and shift sequence **MUST** be the same length.
@@ -54,7 +54,7 @@ Return to menu? (y/n)
 {to be revised}
 
 ### 3. Count Elements
-Counts the elements  within the string provided by the user.
++ Counts the elements  within the string provided by the user.
 
 example:<br>
 ```
@@ -71,5 +71,26 @@ Enter one or more characters to check (separated by commas): F, U, TH, O, R, C, 
 There are 11 elements in the input.
 Return to menu? (y/n)
 ```
+
+### 4. String Cleaner
++ Takes commas and whitespace out of input string.
+
+example:
+```
+Main Menu:
+[1] Key Shift
+[2] Prime Values
+[3] Count Elements
+[4] String Cleaner
+[5] Rolling Key
+[6] Quit
+
+Enter the option number: 4
+Enter a string: A, N, E, N, D, W, I, TH, I, N, TH, E, D, E, E, P, W, E, B, TH, E, R, E, E, X, I, S, T, S, A, P, A, G, E, TH, A, T, H, A, S, H, E, S, T, O, I, T, I, S, TH, E, D, U, T, Y, O, F, E, U, E, R, Y, P, I, L, G, R, I, M, T, O, S, E, E, C, O, U, T, TH, I, S, P, A, G, E
+Cleaned String: ANENDWITHINTHEDEEPWEBTHEREEXISTSAPAGETHATHASHESTOITISTHEDUTYOFEUERYPILGRIMTOSEECOUTTHISPAGE
+Return to menu? (y/n)
+```
+
+
 
 to be continued...
