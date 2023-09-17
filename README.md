@@ -15,14 +15,13 @@ example:
 (A,B,C,D,E,...)
 ```
 ## Tutorial
-
-## Main Menu
-  1. Key Shift
-  2. Prime Values (needs revision)
-  3. Count Elements
-  4. String Cleaner
-  5. Rolling Key
-  6. Quit
+Main Menu
+1. Key Shift
+2. Prime Values (needs revision)
+3. Count Elements
+4. String Cleaner
+5. Rolling Key
+6. Quit
 
 ### 1. Key Shift
 First accepts a user input for a character string to be shifted. **MUST BE LETTERS** Then asks for user for shift sequence. **CAN BE LETTERS OR NUMBERS**. 
