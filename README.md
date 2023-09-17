@@ -4,7 +4,7 @@
 
 # ![Screenshot 2023-09-16 162429](https://github.com/Wra1th/Nebuchadnezzar/assets/12640013/67c733b7-162e-486a-a331-1c3d169ffbde)
 
-> [!NOTE] <br>
+> [!NOTE]
 > Important!
 
 This program does **NOT** work with runes. Only letters and numbers.<br>
