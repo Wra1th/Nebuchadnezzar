@@ -1,7 +1,8 @@
 # Project "Nebuchadnezzar"
+
+![William_Blake_-_Nebuchadnezzar_(Tate_Britain)](https://github.com/Wra1th/Nebuchadnezzar/assets/12640013/9c40de66-82d7-4b74-a2a2-5bda52d2db24)
+
 ## 3301 Cicada | Liber Primus | Solving Tool | GP_tool
-
-
 # ![Screenshot 2023-09-16 162429](https://github.com/Wra1th/Nebuchadnezzar/assets/12640013/67c733b7-162e-486a-a331-1c3d169ffbde)
 
 > [!NOTE]
@@ -9,6 +10,7 @@
 
 example:
 ```
+input:
 (2, 3, 5, 7, 11, ...)
 (2,3,5,7,11,...)
 (A, B, C, D, E, ...)
